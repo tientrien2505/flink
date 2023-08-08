@@ -1,0 +1,15 @@
+{
+  "name": "db-source-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "abc123",
+    "database.dbname": "database_source",
+    "database.server.name": "postgres",
+    "table.include.list": "public.transaction",
+    "plugin.name": "pgoutput",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter"
+  }
+}
